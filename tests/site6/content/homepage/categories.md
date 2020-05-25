@@ -10,7 +10,7 @@ cards:
     headline: Starting a team
     text: How to set up a multidisciplinary team to design, build and maintain  a service.
     link: '/starting-team/'
-    background: '#1B7991'     
+    background: '#1B7991'
   - image: user-research-card.jpg
     headline: User research
     text: User research helps you to learn about users and create services that meet their needs.

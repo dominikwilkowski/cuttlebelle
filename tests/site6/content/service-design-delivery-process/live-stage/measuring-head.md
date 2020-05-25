@@ -1,4 +1,4 @@
 ---
 layout: nav/section
-section: Measuring performance 
+section: Measuring performance
 ---

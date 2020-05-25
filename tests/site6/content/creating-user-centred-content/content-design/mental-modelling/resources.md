@@ -2,7 +2,7 @@
 layout: cards/cards
 cards:
 - headline: Mental models
-  text: Read about mental modelling in design  
+  text: Read about mental modelling in design
   link: 'https://www.nngroup.com/articles/mental-models/'
   cta: Read on Nielsen Norman Group
 - headline: Mental model diagrams

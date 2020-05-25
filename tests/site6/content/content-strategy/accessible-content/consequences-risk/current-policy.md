@@ -6,7 +6,7 @@ layout: text/textblock
 
 Private and public sector online complaints do happen.
 
-The [Disability Discrimination Act 1992](https://www.humanrights.gov.au/our-work/disability-rights/about-disability-rights) protects Australians from discrimination. It is unlawful to treat people with disability any differently from those without disability. 
+The [Disability Discrimination Act 1992](https://www.humanrights.gov.au/our-work/disability-rights/about-disability-rights) protects Australians from discrimination. It is unlawful to treat people with disability any differently from those without disability.
 
 The Human Rights Commission's [World Wide Web Access: Disability Discrimination Act Advisory Notes](https://www.humanrights.gov.au/world-wide-web-access-disability-discrimination-act-advisory-notes-ver-41-2014) advises implementing WCAG 2.0 at level AA.
 
@@ -17,7 +17,7 @@ The Human Rights Commission's [World Wide Web Access: Disability Discrimination 
 
 New or redesigned government services need to be accessible to all users, regardless of their:
 
-- ability and environment 
+- ability and environment
 - digital confidence
 - digital access
 

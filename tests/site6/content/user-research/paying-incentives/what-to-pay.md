@@ -22,4 +22,4 @@ Check your agency’s policy on paying people for research participation.
 
 Make sure that the incentive is appropriate to the participant’s background and personal circumstances. For example, offer a voucher or gift card for a store that the participant can travel to easily.
 
-Keep a record of which incentive you gave to which participant. You can manage this if you use gift cards by recording the card number and having the participant sign for it.   
+Keep a record of which incentive you gave to which participant. You can manage this if you use gift cards by recording the card number and having the participant sign for it.

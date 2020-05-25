@@ -12,7 +12,7 @@ Some ways to reduce duplication:
 
 If you are developing a large government website and there are smaller websites within your portfolio, include brief information about the sub-sites on your main website.  Then direct traffic across to those sites. Consider user needs in each instance when deciding on your linking strategy.
 
-There are also some online tools which detect duplicate content across the web.  
+There are also some online tools which detect duplicate content across the web.
 
 
 

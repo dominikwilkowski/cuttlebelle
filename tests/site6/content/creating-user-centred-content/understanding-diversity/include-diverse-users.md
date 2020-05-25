@@ -2,7 +2,7 @@
 layout: text/textblock
 section: Include diverse users
 ---
-Understanding and being inclusive of diverse user groups should be an ongoing consideration. 
+Understanding and being inclusive of diverse user groups should be an ongoing consideration.
 
 You need to:
 - develop empathy for diverse users, and their needs and abilities
@@ -25,7 +25,7 @@ When you include diverse users in research activities, cater for any access need
 
 ### [2] Engage with specialists
 
-You don’t need to work alone. Diversity and inclusivity specialists can help with creating inclusive content. 
+You don’t need to work alone. Diversity and inclusivity specialists can help with creating inclusive content.
 
 When doing user research, you can engage with trusted intermediaries. For example, these may include multicultural service officers in your agency. They can help you:
 

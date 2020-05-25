@@ -7,7 +7,7 @@ Whichever model you choose, you should aim for a consistent, quality user experi
 ### [2]Decentralised content governance
 Subject matter experts (SMEs) create and publish their own content.
 
-#### [1]Pros:   
+#### [1]Pros:
 Faster approval and publishing times.
 
 #### [1]Cons:
@@ -19,7 +19,7 @@ A central content team oversees content. In agencies these are often publishing 
 #### [1]Pros:
 A content strategy, supported by guidelines and templates, encourages capability building and the development of a content community. Quality reviews and checks are part of workflow to ensure continuous improvement.
 
-#### [1]Cons:  
+#### [1]Cons:
 Often a complex workflow. There can also be delays in negotiating and finalising content.
 
 ### [2]Hybrid content governance

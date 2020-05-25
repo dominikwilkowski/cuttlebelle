@@ -3,7 +3,7 @@ layout: text/textblock
 section: Set up redirects
 ---
 Redirects are a part of removal. They make sure:
-- you give users options to continue their search for information  
+- you give users options to continue their search for information
 - your website keeps its search engine optimisation (SEO) integrity
 - your website looks maintained
 

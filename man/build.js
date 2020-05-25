@@ -17,36 +17,32 @@ const PGK = require('../package.json');
 const Chalk = require('chalk');
 const Path = require('upath');
 const Fs = require('fs');
+const Remark = require('remark');
+const Man = require('remark-man');
 
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------
 // Generating man page
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------
-const args = [
-	`--version`,
-	`"${ PGK.version }"`,
-	`--manual`,
-	`"Cuttlebelle Help"`,
-	`--section`,
-	`1`,
-	`man.md`,
-];
+const manOptions = {
+	name: 'CUTTLEBELLE',
+	version: PGK.version,
+	manual: 'Cuttlebelle Help',
+	section: 1
+};
 
-const cmd = spawnSync( 'marked-man', args, { cwd: __dirname, encoding : 'utf8' } );
+const md = new Remark().use( Man, manOptions );
 
-if( cmd.stderr ) {
-	console.log(`An error occured when executing: ${ Chalk.yellow(`marked-man ${ args.join(' ') }`) } inside: ${ Chalk.yellow( __dirname ) }`);
-	console.error( Chalk.red( cmd.stderr.toString() ) );
+md.process( Fs.readFileSync( Path.normalize(`${ __dirname }/man.md`) ), ( error, result ) => {
+	if( error ) {
+		console.log(`An error occured when building from: ${ Chalk.yellow('man.md') } inside: ${ Chalk.yellow( __dirname ) }`);
+		console.error( Chalk.red( error.toString() ) );
 
-	process.exit( 1 );
-}
+		process.exit( 1 );
+		return;
+	}
 
-
-//--------------------------------------------------------------------------------------------------------------------------------------------------------------
-// Writing man page
-//--------------------------------------------------------------------------------------------------------------------------------------------------------------
-if( cmd.stdout ) {
-	const manpage = cmd.stdout.toString();
+	const manpage = String( result );
 	const manfile = Path.normalize(`${ __dirname }/cuttlebelle.1`);
 
 	Fs.writeFileSync( manfile, manpage, `utf-8`, ( error ) => {
@@ -60,4 +56,4 @@ if( cmd.stdout ) {
 			process.exit( 0 );
 		}
 	});
-}
+});

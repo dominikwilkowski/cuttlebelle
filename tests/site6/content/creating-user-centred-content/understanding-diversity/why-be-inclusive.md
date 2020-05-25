@@ -15,7 +15,7 @@ Diverse groups include:
 - people from culturally and linguistically diverse (CALD)
 backgrounds
 - people with cognitive or physical disability
-- people who are blind or have a vision impairment 
+- people who are blind or have a vision impairment
 - people who are deaf or have a hearing impairment
 - people living in rural or remote locations
 - people accessing the internet on mobile devices
@@ -30,6 +30,6 @@ Accessibility issues may include:
 - websites that are difficult to navigate using smartphones
 - content too big to download with a low data limit
 
-By addressing accessibility and diversity, we can make our content simple and easy to understand. 
+By addressing accessibility and diversity, we can make our content simple and easy to understand.
 
 You can find guidance about [Accessibility and inclusivity](https://guides.service.gov.au/content-guide/accessibility-inclusivity/) in the Content Guide.

@@ -9,7 +9,7 @@ cards:
     link: content-lifecycle/
   - headline: Identify tasks and skills
     text: Use this workshop in your agency. Explore the typical tasks for each content lifecycle stage, and the skills you need to execute them.
-    link: identify-tasks-skills/    
+    link: identify-tasks-skills/
   - headline: Endorse guides and standards
     text: When you endorse guides and standards, you empower your agency to know what to do, and what not to do.
     link: endorse-guides-standards/

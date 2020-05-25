@@ -2,7 +2,7 @@
 layout: text/textblock
 ---
 
-Think about what skills you might need and if you can use anyone in your existing team.  
+Think about what skills you might need and if you can use anyone in your existing team.
 
 ## [1]Skills needed
 

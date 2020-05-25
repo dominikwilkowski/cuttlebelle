@@ -734,7 +734,10 @@ See below all configuration with default values:
 +			"root": "/",
 +			"doctype": "<!DOCTYPE html>",
 +			"redirectReact": true,
-+			"markdownRenderer": "",
++			"markdown": {
++				"headingIds": true,
++				"plugins": []
++			},
 +			"watchTimeout": 400,
 +			"browserSync": {},
 +			"globalProp": {},
@@ -777,7 +780,10 @@ A breakdown:
     "redirectReact": true,        // You can disable redirecting `import` calls to the locally
                                   // installed react instance of cuttlebelle rather than your
                                   // local folder.
-    "markdownRenderer": "",       // A path to a file that `module.exports` an Marked.Renderer()
+    "markdown": {                 // Markdown settings
+      "headingIds": true          // Add id attributes to headings
+      "plugins": []               // A list of markdown plugin paths or NPM plugin names of
+    },                            // Remark plugins you have installed locally.
                                   // object. Learn more about it here:
                                   // https://github.com/chjj/marked#renderer
                                   // The only addition is the `preparse` key that will be run
@@ -981,14 +987,14 @@ _(_ 💡 _Please look at the coding style and work with it, not against it :smil
 
 Cuttlebelle is being automatically tested on the below systems and node versions.
 
-https://travis-ci.org/cuttlebelle/cuttlebelle.svg?branch=master
+![Travis CI - Build Status](https://travis-ci.org/cuttlebelle/cuttlebelle.svg?branch=master)
 
 | OS        | Node version | Node version | Node version |
 |-----------|--------------|--------------|--------------|
-| `Linux`   | `~8`         | `~10`         | `~12`       |
-| `OSX`     | `~8`         | `~10`         | `~12`       |
+| `Linux`   | `~10`        | `~12`        | `latest`     |
+| `OSX`     | `~10`        | `~12`        | `latest`     |
 
-I got an [end-to-end test script](https://github.com/cuttlebelle/cuttlebelle/blob/master/tests/tester.js) that compares fixtures to what cuttlebelle
+I've got an [end-to-end test script](https://github.com/cuttlebelle/cuttlebelle/blob/master/tests/tester.js) that compares fixtures to what cuttlebelle
 generates. In each of those folders I test for [specific things](https://github.com/cuttlebelle/cuttlebelle/blob/master/tests/tester.js#L30) and make sure
 the checksum of the generated files match the fixtures. In addition to that I created as many
 [unit tests](https://github.com/cuttlebelle/cuttlebelle/tree/master/tests/__unit__) as I can via [Jest](https://facebook.github.io/jest/).

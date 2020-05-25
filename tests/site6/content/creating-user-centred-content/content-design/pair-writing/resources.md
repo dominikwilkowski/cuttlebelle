@@ -2,7 +2,7 @@
 layout: cards/cards
 cards:
 - headline: Use pair writing to collaborate with subject matter experts
-  text: Read about the pair writing technique 
+  text: Read about the pair writing technique
   link: 'https://gathercontent.com/blog/use-pair-writing-to-collaborate-with-subject-matter-experts'
   cta: Read on Gather Content
 - headline: 'It takes 2: how we use pair writing'

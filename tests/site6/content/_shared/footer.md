@@ -1,7 +1,7 @@
 ---
 layout: structure/footer
 links:
-  -  title: homepage  
+  -  title: homepage
   -  title: privacy-statement
   -  title: Disclaimer
      url: https://www.dta.gov.au/disclaimer/

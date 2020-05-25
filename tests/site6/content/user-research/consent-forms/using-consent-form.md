@@ -6,7 +6,7 @@ You should start [interviews with users](/user-research/interviewing-users) by e
 
 Explain that they have a choice about what they wish to consent to. Get permission before starting any form of recording (audio, visual or written).
 
-Sometimes a participant may say something that they don’t feel comfortable sharing. After the interview, make sure they still consent to you using the information. 
+Sometimes a participant may say something that they don’t feel comfortable sharing. After the interview, make sure they still consent to you using the information.
 
 The DTA has a blog about [how to ensure informed consent in user research.](https://www.dta.gov.au/blog/informed-consent-in-user-research/)
 

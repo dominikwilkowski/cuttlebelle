@@ -44,7 +44,7 @@ var: test
 
 test('ParseContent() - Parse md content correctly', () => {
 	const content1 = ``;
-	const match1 = { frontmatter: {}, body: '' };
+	const match1 = { frontmatter: {}, body: '\n' };
 	expect( ParseContent( content1, 'partial.md' ) ).toMatchObject( match1 );
 
 	const content2 = `---\ntest: var\nvar: test\n---\n\n**yes**\n`;
@@ -69,7 +69,7 @@ test('ParseMD() - Non strings stay whatever they are', () => {
 
 test('ParseMD() - Markdown is parsed', () => {
 	const content1 = ``;
-	const match1 = '';
+	const match1 = '\n';
 	expect( ParseMD( content1 ) ).toBe( match1 );
 
 	const content2 = `**yes** _test_`;
@@ -78,15 +78,74 @@ test('ParseMD() - Markdown is parsed', () => {
 });
 
 
-test('ParseMD() - Markdown takes the custom renderer', () => {
-	SETTINGS.defaults.site.markdownRenderer = 'tests/__unit__/mocks/customRenderer.js';
+test('ParseMD() - Markdown takes the custom plugins', () => {
+	SETTINGS.defaults.site.markdown.plugins = [
+		'tests/__unit__/mocks/markdownPluginHeading.js',
+		'tests/__unit__/mocks/markdownPluginMdash.js'
+	];
 	const content2 = `
 ### testing
 
 — no list
 - list
 `;
-	const match2 = '<h3>!testing!</h3><p>&mdash; no list</p>\n<ul>\n<li>list</li>\n</ul>\n';
+	const match2 = '<h3>!testing!</h3>\n<p>&mdash; no list</p>\n<ul>\n<li>list</li>\n</ul>\n';
+	expect( ParseMD( content2 ) ).toBe( match2 );
+});
+
+
+test('ParseMD() - Markdown takes an npm plugin', () => {
+	SETTINGS.defaults.site.markdown.plugins = [
+		'node_modules/remark-dropcap' // This is included in devDependencies in package.json only for this test
+	];
+	const content2 = `
+# Hello World
+
+When in the course of human events.
+
+Things go wild.
+`;
+	const match2 = `<h1 id="hello-world">Hello World</h1>
+<p><span aria-hidden="true"><span class="dropcap">W</span>hen</span><span class="invisible">When</span> in the course of human events.</p>
+<p>Things go wild.</p>
+`;
+	expect( ParseMD( content2 ) ).toBe( match2 );
+});
+
+
+test('ParseMD() - Markdown takes a single npm plugin as a string', () => {
+	SETTINGS.defaults.site.markdown.plugins = 'node_modules/remark-dropcap'; // This is included in devDependencies in package.json only for this test
+	const content2 = `
+# Hello World
+
+When in the course of human events.
+
+Things go wild.
+`;
+	const match2 = `<h1 id="hello-world">Hello World</h1>
+<p><span aria-hidden="true"><span class="dropcap">W</span>hen</span><span class="invisible">When</span> in the course of human events.</p>
+<p>Things go wild.</p>
+`;
+	expect( ParseMD( content2 ) ).toBe( match2 );
+});
+
+
+test('ParseMD() - Markdown ignores plugins which do not exist', () => {
+	SETTINGS.defaults.site.markdown.plugins = [
+		'tests/__unit__/mocks/markdownPluginNonExistent.js',
+		'node_modules/remark-non-existent'
+	];
+	const content2 = `
+# Hello World
+
+When in the course of human events.
+
+Things go wild.
+`;
+	const match2 = `<h1 id="hello-world">Hello World</h1>
+<p>When in the course of human events.</p>
+<p>Things go wild.</p>
+`;
 	expect( ParseMD( content2 ) ).toBe( match2 );
 });
 

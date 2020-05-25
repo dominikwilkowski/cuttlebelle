@@ -4,7 +4,7 @@ layout: text/textblock
 
 If the deadline is fixed, the content may be already signed off. When you must publish content immediately, you will often need to prioritise business needs over user needs.
 
-However, at a minimum, there are some fast and easy checks you can do so your content can be in a good state when published.  
+However, at a minimum, there are some fast and easy checks you can do so your content can be in a good state when published.
 
 ### [2]Minimal quality checks
 - check if [ministerial content](https://www.dta.gov.au/standard/design-guides/common-website-elements/ministerial-content/) is appropriate for publishing on an agency-funded website

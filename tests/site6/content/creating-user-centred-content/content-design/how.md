@@ -19,7 +19,7 @@ Analysing your research will help you [identify users and their needs](/user-res
 
 ### [2]Design content around user needs
 
-You need to decide on the [type of content](http://guides.service.gov.au/content-guide/types-of-content/) to meet your need. Content could include text, video, audio, a tool and so on. 
+You need to decide on the [type of content](http://guides.service.gov.au/content-guide/types-of-content/) to meet your need. Content could include text, video, audio, a tool and so on.
 
 Think about the best format for your user as this will affect how they access your service or get the information they need.
 
@@ -40,6 +40,6 @@ To design high-quality content follow the [Digital Transformation Agency’s des
 
 ### [2]Continually work to make your content better
 
-Putting content in front of users for testing helps you understand what’s working well and what’s not. Ideally this should be done before content goes live. Continue monitoring content once it’s published. 
+Putting content in front of users for testing helps you understand what’s working well and what’s not. Ideally this should be done before content goes live. Continue monitoring content once it’s published.
 
 Test your content with real users, capture feedback and test again. User needs can change, so keep updating.

@@ -11,4 +11,4 @@ Understand each other’s needs, and:
 
 Meet with any new ministerial media advisor. Take them through standard government website processes and guidelines.
 
-Create a list of go-to contacts and phone numbers. For example, the minister’s office, media team, communications team and publishing team.                   
+Create a list of go-to contacts and phone numbers. For example, the minister’s office, media team, communications team and publishing team.

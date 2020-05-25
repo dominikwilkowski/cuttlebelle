@@ -15,7 +15,11 @@
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------
 // Dependencies
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------
-import Marked from 'marked';
+import Fs from 'fs';
+import Remark from 'remark';
+import HTML from 'remark-html';
+import visit from 'unist-util-visit';
+import is from 'unist-util-is';
 import YAML from 'js-yaml';
 import React from 'react';
 
@@ -23,7 +27,7 @@ import React from 'react';
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------
 // Local
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------
-import { Log, Style } from './helper';
+import { Log, Style, Slug } from './helper';
 import { SETTINGS } from './settings';
 import { Path } from './path';
 
@@ -80,41 +84,112 @@ export const ParseContent = ( content, file = 'partial.md', props = {} ) => {
  */
 export const ParseMD = ( markdown, file, props ) => {
 	if( typeof markdown === 'string' ) {
+		const mdSettings = SETTINGS.get().site.markdown;
 
-		let renderer = new Marked.Renderer();
+		const md = new Remark()
+			.use( HTML );
 
-		if( SETTINGS.get().site.markdownRenderer ) {
-			const filePath = Path.normalize(`${ process.cwd() }/${ SETTINGS.get().site.markdownRenderer }`);
+		// Add IDs to headings
+		if( mdSettings.headingIds === true ) {
+			md.use(
+				() => ( tree ) => {
+					visit( tree, 'heading', node => {
+						if( !node.children || node.children.length < 1 ) {
+							return;
+						}
 
-			try {
-				const customRenderer = require( filePath );
-				renderer = customRenderer({ Marked: new Marked.Renderer(), ...props });
+						let text = [];
+						node.children.forEach( child => {
+							if( is( child, 'text' ) ) {
+								text.push( child.value );
+							}
+						} );
+
+						let data = node.data || ( node.data = {} );
+						let hProperties = data.hProperties || ( data.hProperties = {} );
+						let id = hProperties.id;
+
+						if( id ) {
+							data.id = id;
+							return;
+						}
+
+						if( !text ) {
+							return;
+						}
+
+						id = Slug( text.join(' ') );
+						data.id = id;
+						hProperties.id = id;
+					} );
+				}
+			);
+		}
+
+		let plugins = mdSettings.plugins;
+		if( plugins ) {
+			if( typeof plugins === 'string' ) {
+				plugins = [ plugins ];
 			}
-			catch( error ) {
-				Log.error(`Using the custom renderer for markdown caused an error at ${ Style.yellow( filePath ) }`);
-				Log.error( error );
+
+			if( Array.isArray( plugins ) && plugins.length > 0 ) {
+				plugins.forEach( plugin => {
+					// First check the path
+					let pluginPath = Path.normalize( `${ process.cwd() }/${ plugin }` );
+
+					if( !Fs.existsSync( pluginPath ) ) {
+						// Null the path as it was not found
+						pluginPath = null;
+					}
+
+					// Only continue if there is a plugin file found, fail silently
+					if( pluginPath ) {
+						try {
+							// Require the plugin so that we can inspect it
+							const pluginRequire = require(pluginPath);
+							if( pluginRequire ) {
+								if( typeof pluginRequire === 'function' ) {
+									// Looks like a custom plugin, provide props to it
+									// If it's a simple NPM plugin, passing props shouldn't hurt
+									md.use(pluginRequire, props);
+								}
+								else if( Array.isArray(pluginRequire) && pluginRequire[0] && typeof pluginRequire[0] === 'function' ) {
+									// It's an array, and so is an NPM plugin with options provided
+									// Add the plugin using the handy `use(array)`` feature of Remark
+									md.use([pluginRequire]);
+								}
+							}
+						}
+						catch( error ) {
+							// Fail loudly if the plugin won't load properly
+							Log.error(`Using the plugin for markdown caused an error at ${ Style.yellow( pluginPath ) }`);
+							Log.error( error );
+
+							if( process.env.NODE_ENV === 'production' ) { // let’s die in a fiery death if something goes wrong in production
+								process.exit( 1 );
+							}
+						}
+					}
+				} );
+			}
+		}
+
+		let processed;
+		md.process( markdown, ( error, result ) => {
+			if( error ) {
+				Log.error(`Rendering markdown caused an error in ${ Style.yellow( file ) }`);
+				Log.error( String( error ) );
 
 				if( process.env.NODE_ENV === 'production' ) { // let’s die in a fiery death if something goes wrong in production
 					process.exit( 1 );
 				}
-			}
-		}
-
-		try {
-			if( typeof renderer.preparse === 'function' ) {
-				markdown = renderer.preparse( markdown );
+				return;
 			}
 
-			return Marked( markdown, { renderer: renderer } );
-		}
-		catch( error ) {
-			Log.error(`Rendering markdown caused an error in ${ Style.yellow( file ) }`);
-			Log.error( error );
+			processed = String( result );
+		} );
 
-			if( process.env.NODE_ENV === 'production' ) { // let’s die in a fiery death if something goes wrong in production
-				process.exit( 1 );
-			}
-		}
+		return processed;
 	}
 	else {
 		return markdown;

@@ -14,6 +14,6 @@ cards:
     text: Most business owners think in terms of return on investment. Show the value of your content improvement in numbers if you can.
     link: '/content-strategy/getting-buy-in/ask-for-budget/'
   - headline: Pitch your case
-    text: Pitch content improvement around the goal of meeting a user need.  
+    text: Pitch content improvement around the goal of meeting a user need.
     link: '/content-strategy/getting-buy-in/pitch-your-case/'
 ---

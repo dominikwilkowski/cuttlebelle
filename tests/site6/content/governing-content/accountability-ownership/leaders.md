@@ -4,9 +4,9 @@ layout: text/textblock
 
 ### [2]Senior content leads and/or content strategists
 
-Content leadership raises the profile of quality content with senior executives and teams. Content leaders are points of escalation. They are empowered to say ‘no’ to content that is not user focused.  
+Content leadership raises the profile of quality content with senior executives and teams. Content leaders are points of escalation. They are empowered to say ‘no’ to content that is not user focused.
 
-As enablers and leaders they set direction, and influence and mentor content creators. They take part in digital governance or web steering meetings and report on measures of success. 
+As enablers and leaders they set direction, and influence and mentor content creators. They take part in digital governance or web steering meetings and report on measures of success.
 
 Accountability and ownership:
 - establish overall ownership of a website, the content and the strategy

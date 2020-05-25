@@ -16,6 +16,7 @@
 // Dependencies
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------
 import Fs from 'fs';
+import deepmerge from 'deepmerge';
 
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -48,7 +49,10 @@ export type Settings = {
 		root: string,
 		doctype: string,
 		redirectReact: boolean,
-		markdownRenderer: string,
+		markdown: {
+			headingIds: boolean,
+			plugins: array
+		},
 		watchTimeout: number,
 	},
 	docs: {
@@ -92,7 +96,9 @@ export const SETTINGS = {
 			root: Path.normalize(`/`),
 			doctype: '<!DOCTYPE html>', // https://github.com/facebook/react/issues/1035
 			redirectReact: true,
-			markdownRenderer: '',
+			markdown: {
+				headingIds: true
+			},
 			watchTimeout: 400,
 			browserSync: {},
 			globalProp: {},
@@ -204,7 +210,7 @@ export const SETTINGS = {
 
 			newSettings.folder = Object.assign( SETTINGS.defaults.folder, localSettings.folder );
 			newSettings.layouts = Object.assign( SETTINGS.defaults.layouts, localSettings.layouts );
-			newSettings.site = Object.assign( SETTINGS.defaults.site, localSettings.site );
+			newSettings.site = deepmerge( SETTINGS.defaults.site, localSettings.site );
 			newSettings.docs = Object.assign( SETTINGS.defaults.docs, localSettings.docs );
 
 			SETTINGS.defaults = newSettings;

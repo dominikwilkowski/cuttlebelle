@@ -2,7 +2,7 @@
 layout: text/textblock
 ---
 
-The audit templates below are examples. You should update them to suit your needs. 
+The audit templates below are examples. You should update them to suit your needs.
 
 Use these kinds of audit tools when collating content:
 - [NSW Department of Education: content audit spreadsheet (XLSX 191KB)](/assets/files/nsw-education-content-audit-spreadsheet.xlsx)

@@ -1,4 +1,4 @@
 ---
 layout: nav/section
-section: What to pay and how 
+section: What to pay and how
 ---

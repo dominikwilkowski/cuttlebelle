@@ -12,8 +12,8 @@ Some ways you might engage with users include:
 - online surveys, if you have an existing website
 - phone interviews with users who have called the organisation
 - guerilla research which involves approaching people who visit a customer service point within the department and asking them questions on the spot
-- workshops  
+- workshops
 
 Your users should not need to understand your organisational chart to find information on your website.  Make sure you build your IA to meet user needs.
 
-See [user research](/user-research/). 
+See [user research](/user-research/).

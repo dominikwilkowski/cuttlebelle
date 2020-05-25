@@ -2,7 +2,7 @@
 layout: text/textblock
 ---
 
-Find out what senior leadership is excited about or look at their pain points and goals. For example, you could aim to fix a problem to meet a goal in the corporate plan. 
+Find out what senior leadership is excited about or look at their pain points and goals. For example, you could aim to fix a problem to meet a goal in the corporate plan.
 
 It's helpful to offer memorable bite-sized statistics that show pain points, such as:
 - 10% of our pages account for 74% of our traffic

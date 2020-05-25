@@ -16,7 +16,7 @@ Make it clear that research underpins the whole [service design and delivery pro
 
 [Existing research](/user-research/planning-user-research/using-existing-research-data/) can provide evidence that there is a need for a new or improved service. Use this to draft problem statements.
 
-Make these the start of your pitch. 
+Make these the start of your pitch.
 
 ### [2]Work out the cost of the need
 

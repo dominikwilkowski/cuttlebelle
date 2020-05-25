@@ -2,7 +2,7 @@
 layout: text/textblock
 ---
 
-Consultation with internal stakeholders is key to a successful website project. 
+Consultation with internal stakeholders is key to a successful website project.
 
 For large websites impacting the whole organisation, consider conducting a roadshow throughout the organisation. Consult with  leaders and/or other key groups.
 

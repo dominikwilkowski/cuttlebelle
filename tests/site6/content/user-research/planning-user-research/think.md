@@ -5,7 +5,7 @@ layout: text/textblock
 At the beginning of each stage of the service design and delivery process, work as a team to:
 
 - write your research questions (or ‘unknowns’) and group them by theme
-- agree on the groups of users you want to research 
+- agree on the groups of users you want to research
 - decide how to recruit participants for each activity
 - review and share the findings of any existing research
 - find any challenges or deadlines that may influence your research plan

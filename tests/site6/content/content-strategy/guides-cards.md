@@ -9,7 +9,7 @@ cards:
     link: content-auditing/
   - headline: Removing content
     text: Remove unwanted, redundant and out-of-date content to help users find what they need.
-    link: removing-content/    
+    link: removing-content/
   - headline: GOV.AU Content Guide
     text: This 'living' guide helps government teams create simple, clear and accessible digital content.
     link: https://guides.service.gov.au/content-guide/

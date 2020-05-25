@@ -4,7 +4,7 @@ subtitle: Before you develop or update an IA, you may need to seek approval for 
 category: Content strategy
 ---
 
-You will also need to get buy-in from relevant content owners.  
+You will also need to get buy-in from relevant content owners.
 
 To have successful buy-in, you need to be prepared to talk about the benefits for the user and for the organisation.
 

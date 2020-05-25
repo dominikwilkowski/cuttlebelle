@@ -1,7 +1,4 @@
-CUTTLEBELLE
-===========
-
-> Cuttlebelle - The react static site generator that separates editing and code concerns
+> The react static site generator that separates editing and code concerns
 
 To learn more about how to make a new website with Cuttlebelle, visit [https://cuttlebelle.com](https://cuttlebelle.com)
 
@@ -15,7 +12,7 @@ To learn more about how to make a new website with Cuttlebelle, visit [https://c
 
 Cuttlebelle is a react static site generator that separates editing and code concerns.
 
-## Website
+## WEBSITE
 
 [https://cuttlebelle.com](https://cuttlebelle.com)
 
@@ -84,7 +81,10 @@ Defaults:
       "root": "/",
       "doctype": "<!DOCTYPE html>",
       "redirectReact": true,
-      "markdownRenderer": "",
+      "markdown": {
+        "headingIds": true,
+        "plugins": []
+      },
       "watchTimeout": 400
     },
     "docs": {

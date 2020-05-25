@@ -20,7 +20,7 @@ First, define all the different groups of people you need to include in your res
 - existing research
 - subject experts
 - frontline staff
-- service data 
+- service data
 - analytics
 - general population statistics
 - user groups that may have different experiences when using your product

@@ -2,7 +2,7 @@
 layout: text/textblock
 ---
 
-A visual tool will help you to visualise your IA as it is being developed.  This is also useful to show stakeholders.  
+A visual tool will help you to visualise your IA as it is being developed.  This is also useful to show stakeholders.
 
 There are commercial tools designed specifically for this purpose. Software used to develop organisational charts can also be useful.
 

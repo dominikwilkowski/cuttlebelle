@@ -37,7 +37,9 @@ test('SETTINGS.get() - The default settings are correct', () => {
 			root: '/',
 			doctype: '<!DOCTYPE html>',
 			redirectReact: true,
-			markdownRenderer: '',
+			markdown: {
+				headingIds: true
+			},
 			watchTimeout: 400,
 			browserSync: {},
 			globalProp: {},
@@ -106,7 +108,9 @@ test('SETTINGS.set() - Not setting anything will merge default correctly', () =>
 			root: '/',
 			doctype: '<!DOCTYPE html>',
 			redirectReact: true,
-			markdownRenderer: '',
+			markdown: {
+				headingIds: true
+			},
 			watchTimeout: 400,
 			browserSync: {},
 			globalProp: {},
@@ -175,7 +179,9 @@ test('SETTINGS.set() - An empty object as settings folder will merge default cor
 			root: '/',
 			doctype: '<!DOCTYPE html>',
 			redirectReact: true,
-			markdownRenderer: '',
+			markdown: {
+				headingIds: true
+			},
 			watchTimeout: 400,
 			browserSync: {},
 			globalProp: {},
@@ -248,7 +254,9 @@ test('SETTINGS.set() - Prevent cwd from being set', () => {
 			root: '/',
 			doctype: '<!DOCTYPE html>',
 			redirectReact: true,
-			markdownRenderer: '',
+			markdown: {
+				headingIds: true
+			},
 			watchTimeout: 400,
 			browserSync: {},
 			globalProp: {},
@@ -330,7 +338,9 @@ test('SETTINGS.set() - Set settings correctly', () => {
 			root: 'test',
 			doctype: '<!DOCTYPE html>',
 			redirectReact: true,
-			markdownRenderer: '',
+			markdown: {
+				headingIds: true
+			},
 			watchTimeout: 400,
 			browserSync: {},
 			globalProp: {},
@@ -398,7 +408,12 @@ test('SETTINGS.set() - Set all settings correctly', () => {
 			root: 'test',
 			doctype: 'test',
 			redirectReact: 'test',
-			markdownRenderer: 'test',
+			markdown: {
+				headingIds: true,
+				plugins: [
+					'test'
+				]
+			},
 			watchTimeout: 100,
 			browserSync: {
 				port: 1337,
@@ -433,7 +448,12 @@ test('SETTINGS.set() - Set all settings correctly', () => {
 			root: 'test',
 			doctype: 'test',
 			redirectReact: 'test',
-			markdownRenderer: 'test',
+			markdown: {
+				headingIds: true,
+				plugins: [
+					'test'
+				]
+			},
 			watchTimeout: 100,
 			browserSync: {
 				port: 1337,

@@ -24,7 +24,7 @@ cards:
     link: '/user-research/find-user-research-participants/'
   - headline: Interviewing users
     text: How to ask questions and observe users.
-    link: '/user-research/interviewing-users/'   
+    link: '/user-research/interviewing-users/'
   - headline: Consent forms for user research
     text: Making sure users can agree to talk to you.
     link: '/user-research/consent-forms/'

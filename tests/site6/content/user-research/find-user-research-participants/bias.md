@@ -4,7 +4,7 @@ layout: text/textblock
 
 There is a risk that groups of people can be included or excluded, depending on:
 - what the activity is
-- when you schedule the sessions 
+- when you schedule the sessions
 - where you do the research
 - the method you use to recruit your users
 

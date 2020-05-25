@@ -1,6 +1,6 @@
 ---
 layout: intros/intro_with_nav
-subtitle: It is important to conduct usability testing as you develop your IA. 
+subtitle: It is important to conduct usability testing as you develop your IA.
 category: Content strategy
 ---
 

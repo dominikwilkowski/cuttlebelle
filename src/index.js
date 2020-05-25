@@ -72,8 +72,8 @@ if( process.argv.includes('-w') || process.argv.includes('watch') ) {
 // merging default settings with package.json
 const pkgLocation = Path.normalize(`${ process.cwd() }/package.json`);
 if( Fs.existsSync( pkgLocation ) ) {
-	const loacalPkg = require( pkgLocation );
-	SETTINGS.set( loacalPkg.cuttlebelle );
+	const localPkg = require( pkgLocation );
+	SETTINGS.set( localPkg.cuttlebelle );
 }
 
 

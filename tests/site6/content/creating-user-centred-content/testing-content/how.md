@@ -15,6 +15,6 @@ If you’re unsure what to test your content for, find user needs based on previ
 
 Focus on known user needs when testing your content. For example, previous user feedback may suggest your content is confusing. Try focusing your content testing on readability and comprehension.
 
-Note that existing research and Discovery findings can complement your own research. It shouldn’t be relied on as comprehensive. Sometimes sources may be limited or dated. 
+Note that existing research and Discovery findings can complement your own research. It shouldn’t be relied on as comprehensive. Sometimes sources may be limited or dated.
 
 [Analyse](/user-research/analysing-user-research/) and apply insights from each test to improve your content, which you can then test again.

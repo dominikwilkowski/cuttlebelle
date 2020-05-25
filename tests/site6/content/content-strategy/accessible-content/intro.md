@@ -1,6 +1,6 @@
 ---
 layout: intros/intro_with_nav
-subtitle: The people who most need government services and information often find them the hardest to use. 
+subtitle: The people who most need government services and information often find them the hardest to use.
 category: Content Strategy
 ---
 
@@ -17,7 +17,7 @@ Think about creating content that is accessible for everyone from the start. You
 Almost 1 in 5 Australians live with disability. These figures do not include many people with
 
 - learning, reading or other cognitive disabilities
-- mental health issues 
+- mental health issues
 - colour vision deficiency
 - temporary impairments or disabilities
 

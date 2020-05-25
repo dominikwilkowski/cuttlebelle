@@ -31,6 +31,6 @@ Details of process and people involved in recording and removing content respons
 ## [2]Security
 Defines your security measures for the information you publish online.
 
-## [2]Social media  
+## [2]Social media
 Social media standards of use for employees. To apply when they engage in conversations or interact for official, professional or personal use.
 

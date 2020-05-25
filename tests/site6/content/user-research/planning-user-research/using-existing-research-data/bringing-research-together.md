@@ -10,7 +10,7 @@ Find out who is using your product and service, and if there are clear groups of
 
 ### [2]Common interactions
 
-Find out the [user journey and user experience](/service-design-delivery-process/whole-user-experience/) of your service, for example: 
+Find out the [user journey and user experience](/service-design-delivery-process/whole-user-experience/) of your service, for example:
 - Why did they need to use the service?
 - What did they plan to do?
 - What did they do?
